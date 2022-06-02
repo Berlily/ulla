@@ -34,6 +34,13 @@ class Base(BaseTemplate):
       
     
 
+  def logout_link_click(self, **event_args):
+    """This method is called when the link is clicked"""
+    anvil.users.logout()
+    # pop the login/sign_up form  
+    anvil.users.login_with_form(remember_by_default=False, allow_remembered=False)
+
+
 
 
 

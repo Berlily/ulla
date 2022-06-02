@@ -48,6 +48,9 @@ db_schema:
     - name: photo
       admin_ui: {width: 200}
       type: media
+    - name: rate_in_byn
+      admin_ui: {width: 200}
+      type: number
     - name: city
       admin_ui: {width: 200}
       type: string
