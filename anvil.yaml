@@ -38,5 +38,29 @@ db_schema:
     title: Therapists
     client: none
     server: full
-    columns: []
+    columns:
+    - name: name
+      admin_ui: {width: 200}
+      type: string
+    - name: surname
+      admin_ui: {width: 200}
+      type: string
+    - name: photo
+      admin_ui: {width: 200}
+      type: media
+    - name: city
+      admin_ui: {width: 200}
+      type: string
+    - name: specialisation
+      admin_ui: {width: 200}
+      type: link_multiple
+      target: specialisation
+  specialisation:
+    title: Specialisation
+    client: none
+    server: full
+    columns:
+    - name: name
+      admin_ui: {width: 200}
+      type: string
 renamed: true
