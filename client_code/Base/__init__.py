@@ -11,10 +11,20 @@ class Base(BaseTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
-    self.column_panel.add_component(Start())
-  
-
+    
     # Any code you write here will run when the form opens.
+    
+    # First off, the login form pops up
+    # clean the previous sesssion's user
+    current_user= anvil.users.get_user(allow_remembered=False)
+    if current_user is not None:
+      anvil.users.logout()
+    # pop the login/sign_up form  
+    anvil.users.login_with_form(remember_by_default=False, allow_remembered=False)
+      
+    # Second, the Start page loads
+    self.column_panel.add_component(Start())
+    
     
   def show_logout_button(self, **properties):
     if anvil.users.get_user(allow_remembered=True) is not None:
