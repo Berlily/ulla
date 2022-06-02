@@ -42,9 +42,6 @@ db_schema:
     - name: name
       admin_ui: {width: 200}
       type: string
-    - name: surname
-      admin_ui: {width: 200}
-      type: string
     - name: photo
       admin_ui: {width: 200}
       type: media
@@ -69,7 +66,7 @@ db_schema:
       type: string
   city:
     title: City
-    client: none
+    client: search
     server: full
     columns:
     - name: name
