@@ -11,7 +11,7 @@ allow_embedding: false
 name: ulla_user_side
 runtime_options: {version: 2, client_version: '3', server_version: python3-sandbox,
   server_spec: null}
-metadata: {}
+metadata: {title: ülla, logo_img: 'asset:ulla.png'}
 startup_form: Base
 db_schema:
   users:
