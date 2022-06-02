@@ -15,9 +15,7 @@ specialisations = [
   (spec['name'], spec) for spec in app_tables.specialisation.search()
 ]
 
-rate =[
-  (spec['name'], spec) for spec in app_tables.specialisation.search()
-]
+
 
 
 
@@ -25,7 +23,12 @@ class Search(SearchTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
-
+    
+    # attributes that will result in differrent versions of 'Result' page
+    selected_city = ""
+    selected_specialisation = ""
+    selected_max_rate = 0
+    
     # Any code you write here will run when the form opens.
     self.specialisation_drop_down.items = specialisations
     
@@ -41,9 +44,11 @@ class Search(SearchTemplate):
 
   def button_click(self, **event_args):
     """This method is called when the button is clicked"""
-    # go to Re
+    # go to 'Result' page
     self.column_panel.clear()
     self.column_panel.add_component(Result())
+
+
 
   
   
