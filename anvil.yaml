@@ -1,7 +1,9 @@
 allow_embedding: false
-package_name: Material_Design_1
-name: Material Design 1
+package_name: ulla_new
+db_schema: {}
+name: ulla_new
 startup_form: Form1
+renamed: true
 runtime_options: {version: 2, client_version: '3', server_version: python3-sandbox,
   server_spec: null}
 services: []
