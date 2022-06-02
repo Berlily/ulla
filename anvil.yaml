@@ -6,13 +6,13 @@ services:
   client_config: {allow_signup: true, enable_automatically: true, use_email: true,
     confirm_email: false}
   server_config: {user_table: users}
+startup: {type: form, module: Search}
 package_name: ulla_user_side
 allow_embedding: false
 name: ulla_user_side
 runtime_options: {version: 2, client_version: '3', server_version: python3-sandbox,
   server_spec: null}
 metadata: {title: ülla, logo_img: 'asset:ulla.png'}
-startup_form: Base
 db_schema:
   users:
     title: Users

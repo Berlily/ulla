@@ -15,7 +15,7 @@ components:
       italic: false, background: '', bold: false, underline: false, icon: 'fa:sign-out'}
     name: logout_link
     layout_properties: {}
-    event_bindings: {show: logout_link_show, hide: logout_link_hide}
+    event_bindings: {}
 - type: Label
   properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
     text: ülla, font_size: null, font: '', spacing_above: small, icon_align: left,
