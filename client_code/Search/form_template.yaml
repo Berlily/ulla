@@ -11,7 +11,7 @@ components:
   components:
   - type: ColumnPanel
     properties: {role: card, col_widths: '{}'}
-    name: card_1
+    name: column_panel
     layout_properties: {slot: left-nav, grid_position: 'VAVBMT,OCTILD'}
     components:
     - type: Label
@@ -23,7 +23,7 @@ components:
       layout_properties: {grid_position: 'ZHKPUW,LHWFZF'}
     - type: Label
       properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-        visible: true, text: Выберите город, font_size: null, font: '', spacing_above: small,
+        visible: true, text: 'Выберите город:', font_size: null, font: '', spacing_above: small,
         icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
         underline: false, icon: ''}
       name: label_2
@@ -32,10 +32,10 @@ components:
       properties: {}
       name: city_drop_down
       layout_properties: {grid_position: 'VHEWRS,PSDRVL'}
-      event_bindings: {change: drop_down_1_change}
+      event_bindings: {change: city_drop_down_change}
     - type: Label
       properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-        visible: true, text: 'Вас интересует...
+        visible: true, text: 'Область, которая вас интересует...
 
           ', font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small,
         italic: false, background: '', bold: false, underline: false, icon: ''}
@@ -65,13 +65,31 @@ components:
       layout_properties: {grid_position: 'KRXIWN,XHLNES'}
     - type: Label
       properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-        visible: true, text: Стоимость в час до... byn, font_size: null, font: '',
+        visible: true, text: Стоимость в час до ... byn, font_size: null, font: '',
         spacing_above: small, icon_align: left, spacing_below: small, italic: false,
         background: '', bold: false, underline: false, icon: ''}
       name: label_4
       layout_properties: {grid_position: 'YSJYZB,CXVTCA'}
     - type: DropDown
-      properties: {}
+      properties:
+        role: null
+        align: full
+        tooltip: ''
+        placeholder: ''
+        border: ''
+        enabled: true
+        foreground: ''
+        items: ['40', '60', '80', '100', не имеет значения]
+        visible: true
+        font_size: null
+        font: ''
+        spacing_above: small
+        spacing_below: small
+        italic: false
+        background: ''
+        bold: false
+        underline: false
+        include_placeholder: false
       name: drop_down_3
       layout_properties: {grid_position: 'YSJYZB,NFVYOV'}
     - type: Button
@@ -81,4 +99,5 @@ components:
         underline: false, icon: ''}
       name: button
       layout_properties: {grid_position: 'CWRWTT,MUBYXL'}
+      event_bindings: {click: button_click}
 is_package: true
