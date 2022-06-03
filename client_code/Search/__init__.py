@@ -25,9 +25,9 @@ class Search(SearchTemplate):
     self.init_components(**properties)
     
     # attributes that will result in differrent versions of 'Result' page
-    selected_city = ""
-    selected_specialisation = ""
-    selected_max_rate = 0
+    self.selected_city = ""
+    self.selected_specialisation = ""
+    self.selected_max_rate = 0
     
     # Any code you write here will run when the form opens.
     
@@ -36,11 +36,11 @@ class Search(SearchTemplate):
     self.city_drop_down.items = cities
     
   
-
-#   def city_drop_down_change(self, **event_args):
-#     """This method is called when an item is selected"""
-#     if self.city_drop_down.selected_value == "Минск":
-#       /////
+  def city_drop_down_change(self, **event_args):
+    """This method is called when an item is selected"""
+    self.selected_city = self.city_drop_down.selected_value
+    self.selected_specialisation = self.specialisation_drop_down.selected_value
+    self.selected_max_rate = self.max_rate_dropdown.selected_value
       
 
   def button_click(self, **event_args):

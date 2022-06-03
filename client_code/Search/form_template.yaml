@@ -90,7 +90,7 @@ components:
         bold: false
         underline: false
         include_placeholder: false
-      name: drop_down_3
+      name: max_rate_dropdown
       layout_properties: {grid_position: 'YSJYZB,NFVYOV'}
       event_bindings: {change: drop_down_3_change}
     - type: Button
