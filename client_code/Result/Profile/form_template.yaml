@@ -36,7 +36,7 @@ components:
     name: specialisatioln_label
     layout_properties: {grid_position: 'RIOHQK,FJXVEE CGHLYE,YCZEMY'}
     data_bindings:
-    - {property: text, code: 'self.item[''specialisation'']'}
+    - {property: text, code: 'self.item[''specialisation''] [''name:''] '}
   - type: Label
     properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
       visible: true, text: 'Цена, руб/час:', font_size: null, font: '', spacing_above: small,
