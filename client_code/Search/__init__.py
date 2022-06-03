@@ -36,7 +36,6 @@ class Search(SearchTemplate):
     self.city_drop_down.items = cities
     
   
-    
 
 #   def city_drop_down_change(self, **event_args):
 #     """This method is called when an item is selected"""
