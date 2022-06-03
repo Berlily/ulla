@@ -5,6 +5,7 @@ import anvil.users
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
+from ..Search import Search
 
 
 class Result(ResultTemplate):
@@ -17,4 +18,5 @@ class Result(ResultTemplate):
     
   def refresh_therapists(self):
     # Load existing therapists from the Data Table, and display them in the RepeatingPanel
-    self.repeating_panel.items = anvil.server.call('get_therapists')
+    self.repeating_panel.items = anvil.server.call('get_therapists()')
+    if Search.
