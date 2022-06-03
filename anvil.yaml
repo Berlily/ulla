@@ -6,7 +6,7 @@ services:
   client_config: {allow_signup: true, enable_automatically: true, use_email: true,
     confirm_email: false}
   server_config: {user_table: users}
-startup: {type: form, module: Result}
+startup: {type: form, module: Base}
 package_name: ulla_user_side
 allow_embedding: false
 name: ulla_user_side
