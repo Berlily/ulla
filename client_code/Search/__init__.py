@@ -30,16 +30,18 @@ class Search(SearchTemplate):
     selected_max_rate = 0
     
     # Any code you write here will run when the form opens.
-    self.specialisation_drop_down.items = specialisations
     
     # Create DropDowns
     self.specialisation_drop_down.items = specialisations + ["Затрудняюсь ответить"]
     self.city_drop_down.items = cities
+    
+  
+    
 
-  def city_drop_down_change(self, **event_args):
-    """This method is called when an item is selected"""
-    if self.city_drop_down.selected_value == "Минск":
-      /////
+#   def city_drop_down_change(self, **event_args):
+#     """This method is called when an item is selected"""
+#     if self.city_drop_down.selected_value == "Минск":
+#       /////
       
 
   def button_click(self, **event_args):

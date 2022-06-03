@@ -9,10 +9,11 @@ import anvil.server
 #
 # To allow anvil.server.call() to call functions here, we mark
 # them with @anvil.server.callable.
-# Here is an example - you can replace it with your own:
-#
 
-
+@anvil.server.callable
+def get_therapists():
+  # Get a list of therapists from the Data Table
+  return app_tables.therapists.search()
 
 
 
