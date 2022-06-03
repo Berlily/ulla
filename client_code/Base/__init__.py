@@ -16,8 +16,8 @@ class Base(BaseTemplate):
     
     # First off, the login form pops up
     # clean the previous sesssion's user
-    current_user= anvil.users.get_user(allow_remembered=False)
-    if current_user is not None:
+    self.current_user = anvil.users.get_user(allow_remembered=False)
+    if self.current_user is not None:
       anvil.users.logout()
     # pop the login/sign_up form  
     anvil.users.login_with_form(remember_by_default=False, allow_remembered=False)
