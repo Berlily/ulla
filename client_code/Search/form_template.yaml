@@ -63,6 +63,7 @@ components:
         include_placeholder: false
       name: specialisation_drop_down
       layout_properties: {grid_position: 'KRXIWN,XHLNES'}
+      event_bindings: {change: specialisation_drop_down_change}
     - type: Label
       properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
         visible: true, text: Стоимость в час до ... byn, font_size: null, font: '',

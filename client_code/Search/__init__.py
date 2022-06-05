@@ -35,19 +35,27 @@ class Search(SearchTemplate):
     self.specialisation_drop_down.items = specialisations + ["Затрудняюсь ответить"]
     self.city_drop_down.items = cities
     
-  
+    #manage dropdowns    
   def city_drop_down_change(self, **event_args):
     """This method is called when an item is selected"""
-    self.selected_city = self.city_drop_down.selected_value
-    self.selected_specialisation = self.specialisation_drop_down.selected_value
-    self.selected_max_rate = self.max_rate_dropdown.selected_value
-      
+    self.selected_city = self.city_drop_down.selected_value    
 
+  def specialisation_drop_down_change(self, **event_args):
+    """This method is called when an item is selected"""
+    self.selected_specialisation = self.specialisation_drop_down.selected_value
+
+  def drop_down_3_change(self, **event_args):
+    """This method is called when an item is selected"""
+    self.selected_max_rate = self.max_rate_dropdown.selected_value
+
+   #go to 'Result' page
   def button_click(self, **event_args):
     """This method is called when the button is clicked"""
     # go to 'Result' page
     self.column_panel.clear()
-    self.column_panel.add_component(Result())
+    self.column_panel.add_component(Result(self.selected_city, self.selected_specialisation,
+    self.selected_max_rate))    
+
 
 
 
