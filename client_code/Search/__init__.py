@@ -53,8 +53,9 @@ class Search(SearchTemplate):
     """This method is called when the button is clicked"""
     # go to 'Result' page
     self.column_panel.clear()
-    self.column_panel.add_component(Result(city = self.selected_city, specialisation= self.selected_specialisation,
-    max_rate = self.selected_max_rate))    
+    next_form = Result(self.selected_city,  self.selected_specialisation)
+    self.column_panel.add_component(next_form)  
+    
 
 
 
