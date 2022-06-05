@@ -11,10 +11,6 @@ import anvil.server
 # To allow anvil.server.call() to call functions here, we mark
 # them with @anvil.server.callable.
 
-@anvil.server.callable
-def get_therapists():
-  # Get a list of therapists from the Data Table
-  return app_tables.therapists.search()
 
 @anvil.server.callable
 def get_therapists( city="", spec="", max_rate=0 ):
