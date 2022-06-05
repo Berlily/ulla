@@ -34,6 +34,9 @@ db_schema:
     - name: last_login
       admin_ui: {width: 200}
       type: datetime
+    - name: n_password_failures
+      admin_ui: {width: 200}
+      type: number
   therapists:
     title: Therapists
     client: search

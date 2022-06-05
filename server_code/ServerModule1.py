@@ -22,6 +22,6 @@ def get_therapists( city="", spec="", max_rate=0 ):
   city_col = city
   specialisation_col = spec
   max_rate_col = max_rate
-  return app_tables.therapists.search(rate_in_byn<= max_rate, city= city_col,specialisation = specialisation_col)
+  return app_tables.therapists.search(rate_in_byn<= max_rate, city= city_col, specialisation = specialisation_col)
 
 
