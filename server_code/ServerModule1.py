@@ -3,7 +3,7 @@ import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
 import anvil.server
-#from ..Search import Search
+import anvil.tables.query as q
 
 # This is a server module. It runs on the Anvil server,
 # rather than in the user's browser.
@@ -18,6 +18,6 @@ def get_therapists( city="", spec="", max_rate=0 ):
   city_col = city
   specialisation_col = spec
   max_rate_col = max_rate
-  return app_tables.therapists.search(rate_in_byn<= max_rate, city= city_col, specialisation = specialisation_col)
+  return app_tables.therapists.search(max_rate_col <= max_rate, city= city_col, specialisation = specialisation_col)
 
 

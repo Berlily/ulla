@@ -9,12 +9,12 @@ from anvil.tables import app_tables
 
 
 class Result(ResultTemplate):
-  def __init__(self, selected_city, selected_specialisation ):
+  def __init__(self, selected_city, selected_specialisation, selected_max_rate, **properties ):
 # You must call self.init_components() before doing anything else in this function
-    self.init_components(selected_city, selected_specialisation)    
+    self.init_components(**properties)    
     self.city = selected_city
     self.specialisation = selected_specialisation
-   # self.max_rate = selected_max_rate
+    self.max_rate = selected_max_rate
     
 
 
