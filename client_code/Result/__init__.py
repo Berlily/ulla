@@ -9,12 +9,13 @@ from anvil.tables import app_tables
 
 
 class Result(ResultTemplate):
-  def __init__(self, selected_city, selected_specialisation, selected_max_rate, **properties ):
+  def __init__(self, selected_max_rate, selected_city:str, selected_specialisation:str, **properties ):
 # You must call self.init_components() before doing anything else in this function
-    self.init_components(**properties)    
+    self.init_components(**properties)
+    self.max_rate = selected_max_rate
     self.city = selected_city
     self.specialisation = selected_specialisation
-    self.max_rate = selected_max_rate
+    
     
 
 
@@ -23,5 +24,6 @@ class Result(ResultTemplate):
     
   def refresh_therapists(self):
     # Load existing therapists from the Data Table, and display them in the RepeatingPanel
-    self.repeating_panel.items = anvil.server.call('get_therapists', self.max_rate, self.city, self.specialisation )
+    self.repeating_panel.items = anvil.server.call('get_therapists', self.max_rate )
+    #self.repeating_panel.items = anvil.server.call('get_therapists', self.max_rate, self.city, self.specialisation )
     

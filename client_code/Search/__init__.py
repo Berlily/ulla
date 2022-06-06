@@ -34,29 +34,48 @@ class Search(SearchTemplate):
     # Create DropDowns
     self.specialisation_drop_down.items = specialisations + ["Затрудняюсь ответить"]
     self.city_drop_down.items = cities
-    self.max_rate_dropdown.items = [40, 60, 80, 100, 'не имеет значения']
+    # numbers are strings here, because in anvil " dropdown 'items' must be a list of strings or tuples"
+    self.max_rate_dropdown.items = ['40', '60', '80', '100', 'не имеет значения']
     
-    #manage dropdowns    
+    #save tha state of variable when a dropdown item is selected
+    self.selected_city = self.city_drop_down_change()
+    self.selected_specialisation = self.specialisation_drop_down_change()
+    self.selected_max_rate = self.max_rate_dropdown_change()
+    
+    #dropdown functions   
   def city_drop_down_change(self, **event_args):
     """This method is called when an item is selected"""
-    self.selected_city = self.city_drop_down.selected_value    
+    self.selected_city = self.city_drop_down.selected_value
+    return self.selected_city
 
   def specialisation_drop_down_change(self, **event_args):
     """This method is called when an item is selected"""
     self.selected_specialisation = self.specialisation_drop_down.selected_value
+    return self.selected_specialisation
+    
 
-  def drop_down_3_change(self, **event_args):
+  def max_rate_dropdown_change(self, **event_args):
     """This method is called when an item is selected"""
-    self.selected_max_rate = self.max_rate_dropdown.selected_value
+    # converting string to int
+    if self.selected_max_rate == 'не имеет значения':
+      pass
+    else:
+      self.selected_max_rate = int (self.max_rate_dropdown.selected_value)
+      print (self.selected_max_rate)
+      print (type(self.selected_max_rate))
+    
+    return self.selected_max_rate
 
    #go to 'Result' page
   def button_click(self, **event_args):
     """This method is called when the button is clicked"""
     # go to 'Result' page
     self.column_panel.clear()
-    next_form = Result(self.selected_city,  self.selected_specialisation, self.selected_max_rate)
-    self.column_panel.add_component(next_form)  
     
+    #next_form = Result(self.selected_max_rate, self.selected_city,  self.selected_specialisation)
+    #self.column_panel.add_component(next_form)  
+    
+
 
 
 
