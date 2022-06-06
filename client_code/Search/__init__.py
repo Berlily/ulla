@@ -34,6 +34,7 @@ class Search(SearchTemplate):
     # Create DropDowns
     self.specialisation_drop_down.items = specialisations + ["Затрудняюсь ответить"]
     self.city_drop_down.items = cities
+    self.max_rate_dropdown.items = [40, 60, 80, 100, 'не имеет значения']
     
     #manage dropdowns    
   def city_drop_down_change(self, **event_args):

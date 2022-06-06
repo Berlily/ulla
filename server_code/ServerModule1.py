@@ -13,12 +13,18 @@ import anvil.tables.query as q
 
 
 @anvil.server.callable
-def get_therapists( city="", spec="", max_rate=0 ):
+def get_therapists( max_rate: int, city_var: string, spec_var: string ) :
   # Get a list of therapists from the Data Table
-  city_col = city
-  specialisation_col = spec
-  max_rate_col = max_rate
-  items = app_tables.therapists.search(rate_in_byn = q.less_than_or_equal_to(max_rate_col), city= city_col, specialisation= specialisation_col)
+
+  
+#   kwargs = {'rate_in_byn': max_rate, 'city': city, 'specialisation': spec}
+#   items = app_tables.therapists.search(q.all_of(**kwargs))
+
+  if 
+
+ #max rate
+  app_tables.therapists.search(rate_in_byn= max_rate)
+
   return items
 
 
