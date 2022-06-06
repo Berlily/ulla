@@ -23,12 +23,13 @@ def get_therapists( max_rate: int, city_var: str ) :
 
 
   #city
-  matching_city = app_tables.city.get(name = city_var)
-  city_view = app_tables.therapists.search(city=[matching_city])
+  matching_city = str(app_tables.city.get(name = city_var))
+  
+  city_view = app_tables.therapists.search(city=matching_city)
   
   #max rate
   
-  result_view = app_tables.therapists.search(rate_in_byn = q.less_than_or_equal_to(max_rate))
+  result_view = app_tables.therapists.search(rate_in_byn = q.less_than_or_equal_to(max_rate), city= city_var)
 
   return items
 
