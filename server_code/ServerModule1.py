@@ -23,7 +23,7 @@ def get_therapists( max_rate: int ) :
 
 
  #max rate
-  app_tables.therapists.search(rate_in_byn = q.less_than_or_equal_to(max_rate))
+  items = app_tables.therapists.search(rate_in_byn = q.less_than_or_equal_to(max_rate))
 
   return items
 

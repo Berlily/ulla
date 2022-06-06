@@ -57,10 +57,12 @@ class Search(SearchTemplate):
   def max_rate_dropdown_change(self, **event_args):
     """This method is called when an item is selected"""
     # converting string to int
-    if self.selected_max_rate == 'не имеет значения':
-      pass
-    else:
+    if self.max_rate_dropdown.selected_value != 'не имеет значения':
       self.selected_max_rate = int (self.max_rate_dropdown.selected_value)
+      print (self.selected_max_rate)
+      print (type(self.selected_max_rate))
+    else:
+      self.selected_max_rate = self.max_rate_dropdown.selected_value
       print (self.selected_max_rate)
       print (type(self.selected_max_rate))
     
@@ -72,8 +74,8 @@ class Search(SearchTemplate):
     # go to 'Result' page
     self.column_panel.clear()
     
-    #next_form = Result(self.selected_max_rate, self.selected_city,  self.selected_specialisation)
-    #self.column_panel.add_component(next_form)  
+    next_form = Result(self.selected_max_rate, self.selected_city,  self.selected_specialisation)
+    self.column_panel.add_component(next_form)  
     
 
 
