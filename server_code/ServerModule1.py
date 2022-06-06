@@ -23,6 +23,7 @@ def get_therapists( max_rate: int, city_var: str ) :
 
 
   #city
+  city_var = str(city_var)
   matching_city = str(app_tables.city.get(name = city_var))
   
   city_view = app_tables.therapists.search(city=matching_city)
