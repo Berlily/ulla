@@ -54,6 +54,8 @@ class Search(SearchTemplate):
   def specialisation_drop_down_change(self, **event_args):
     """This method is called when an item is selected"""
     self.selected_specialisation = self.specialisation_drop_down.selected_value
+    print (self.selected_specialisation)
+    print (type(self.selected_specialisation))
     return self.selected_specialisation
     
 

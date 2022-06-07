@@ -24,6 +24,6 @@ class Result(ResultTemplate):
     
   def refresh_therapists(self):
     # Load existing therapists from the Data Table, and display them in the RepeatingPanel
-    self.repeating_panel.items = anvil.server.call('get_therapists', self.max_rate, self.city )
+    self.repeating_panel.items = anvil.server.call('get_therapists', self.max_rate, self.city,self.specialisation )
     #self.repeating_panel.items = anvil.server.call('get_therapists', self.max_rate, self.city, self.specialisation )
     
