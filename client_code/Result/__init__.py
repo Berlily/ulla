@@ -17,8 +17,7 @@ class Result(ResultTemplate):
     self.city = selected_city
     self.specialisation = selected_specialisation
     
-    
-
+  
 
     # Any code you write here will run when the form opens.
     self.refresh_therapists()
@@ -27,10 +26,15 @@ class Result(ResultTemplate):
     # Load existing therapists from the Data Table, and display them in the RepeatingPanel
     print(self.repeating_panel.items)
     print (type(self.repeating_panel.items))
-    self.repeating_panel.items = anvil.server.call('get_therapists', self.max_rate, self.city,self.specialisation )
+    self.repeating_panel.items = anvil.server.call('get_therapists', self.max_rate, self.city, self.specialisation )
     print(self.repeating_panel.items)
     print (type(self.repeating_panel.items))
-    if self.repeating_panel.items == None:
+#     if self.repeating_panel.items == None:
+#       return anvil.alert('По вашему запросу ничего не найдено:(')
+#     else:
+#       return self.repeating_panel.items
+
+    if self.repeating_panel.items == []:
       return anvil.alert('По вашему запросу ничего не найдено:(')
     else:
       return self.repeating_panel.items

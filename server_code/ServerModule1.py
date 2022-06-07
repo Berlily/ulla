@@ -27,10 +27,13 @@ def get_therapists( max_rate, city_var: str, spec: str ) :
   
   print('type of. result_view (server side func)', type(result_view))
   
-  if result_view == None:
-    return None
+#   if result_view == None:
+#     return None
+#   else:
+#     return result_view
+
+  if result_view == []:
+    return []
   else:
     return result_view
-
-
 
