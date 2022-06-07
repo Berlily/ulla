@@ -18,7 +18,6 @@ specialisations = [
 
 
 
-
 class Search(SearchTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
@@ -47,15 +46,11 @@ class Search(SearchTemplate):
     """This method is called when an item is selected"""
     self.selected_city = self.city_drop_down.selected_value
     #self.selected_city = str(self.selected_city)
-    print (self.selected_city)
-    print (type(self.selected_city))
     return self.selected_city
 
   def specialisation_drop_down_change(self, **event_args):
     """This method is called when an item is selected"""
     self.selected_specialisation = self.specialisation_drop_down.selected_value
-    print (self.selected_specialisation)
-    print (type(self.selected_specialisation))
     return self.selected_specialisation
     
 

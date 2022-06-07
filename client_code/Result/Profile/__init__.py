@@ -14,4 +14,11 @@ class Profile(ProfileTemplate):
     # Any code you write here will run when the form opens.
     
 
+  def form_refreshing_data_bindings(self, **event_args):
+    """This method is called when refreshing_data_bindings is called"""
+    pass
+
+
+
+
   
