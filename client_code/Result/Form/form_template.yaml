@@ -3,51 +3,51 @@ container:
   properties: {col_widths: '{}'}
   event_bindings: {}
 components:
-- type: Label
-  properties: {role: subheading, align: left, tooltip: '', border: '', foreground: '',
-    visible: true, text: '', font_size: null, font: '', spacing_above: small, icon_align: left,
-    spacing_below: small, italic: false, background: '', bold: false, underline: false,
-    icon: ''}
-  name: name_label
-  layout_properties: {grid_position: 'PEVFBR,OWQIVS'}
-  data_bindings:
-  - {property: text, code: 'self.item[''name'']'}
-- type: Label
-  properties: {role: headline, align: left, tooltip: '', border: '', foreground: '',
-    visible: true, text: '', font_size: null, font: '', spacing_above: small, icon_align: left,
-    spacing_below: small, italic: false, background: '', bold: false, underline: false,
-    icon: ''}
-  name: city_label
-  layout_properties: {grid_position: 'PEVFBR,BHFRIJ'}
-  data_bindings:
-  - {property: text, code: 'self.item[''city''] [''name'']'}
 - type: ColumnPanel
   properties: {role: card, col_widths: '{}'}
   name: card_1
   layout_properties: {grid_position: 'VFGPTP,EIHNMA'}
   components:
+  - type: Label
+    properties: {role: subheading, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: '', font_size: null, font: '', spacing_above: small, icon_align: left,
+      spacing_below: small, italic: false, background: '', bold: false, underline: false,
+      icon: ''}
+    name: name_label
+    layout_properties: {grid_position: 'DZRFTK,QZAPID NHTNYN,OOAMTB'}
+    data_bindings:
+    - {property: text, code: 'self.item[''name'']'}
   - type: Image
     properties: {role: null, vertical_align: center, height: '200', tooltip: '', border: '',
       foreground: '', visible: true, display_mode: shrink_to_fit, spacing_above: small,
       source: '', spacing_below: small, background: '', horizontal_align: center}
     name: photo
-    layout_properties: {grid_position: 'RIOHQK,GQQIGF', full_width_row: false}
+    layout_properties: {grid_position: 'DZRFTK,QZAPID CRXMJH,VZCAAV', full_width_row: false}
     data_bindings:
     - {property: source, code: 'self.item[''photo'']'}
+  - type: Label
+    properties: {role: headline, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: '', font_size: null, font: '', spacing_above: small, icon_align: left,
+      spacing_below: small, italic: false, background: '', bold: false, underline: false,
+      icon: ''}
+    name: city_label
+    layout_properties: {grid_position: 'DZRFTK,INTUTK JNRGJD,ITEICL'}
+    data_bindings:
+    - {property: text, code: 'self.item[''city''] [''name'']'}
   - type: Label
     properties: {role: subheading, align: left, tooltip: '', border: '', foreground: '',
       visible: true, text: 'Цена, руб/час:', font_size: 26, font: '', spacing_above: small,
       icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
       underline: false, icon: ''}
     name: label_1
-    layout_properties: {grid_position: 'RIOHQK,FJXVEE IXMBNQ,RSKYSX', full_width_row: false}
+    layout_properties: {grid_position: 'DZRFTK,INTUTK IXMBNQ,RSKYSX', full_width_row: false}
   - type: Label
     properties: {role: subheading, align: left, tooltip: '', border: '', foreground: '',
       visible: true, text: '', font_size: 26, font: '', spacing_above: small, icon_align: left,
       spacing_below: small, italic: false, background: '', bold: false, underline: false,
       icon: ''}
     name: rate_in_byn_label
-    layout_properties: {grid_position: 'RIOHQK,FJXVEE VKCZHZ,RXTOUE', full_width_row: false}
+    layout_properties: {grid_position: 'DZRFTK,INTUTK VKCZHZ,RXTOUE', full_width_row: false}
     data_bindings:
     - {property: text, code: 'self.item[''rate_in_byn'']'}
   - type: Button
@@ -56,13 +56,14 @@ components:
       spacing_above: small, icon_align: left, spacing_below: small, italic: false,
       background: '', bold: false, underline: false, icon: ''}
     name: book_button
-    layout_properties: {grid_position: 'RIOHQK,FJXVEE QJBJTF,YYIXUW', full_width_row: false}
+    layout_properties: {grid_position: 'DZRFTK,INTUTK QJBJTF,YYIXUW', full_width_row: false}
   - type: Button
     properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
-      foreground: '', visible: true, text: (Перейти в профиль), font_size: null, font: '',
+      foreground: '', visible: true, text: Перейти в профиль, font_size: null, font: '',
       spacing_above: small, icon_align: left, spacing_below: small, italic: false,
       background: '', bold: false, underline: false, icon: ''}
     name: profile_button
-    layout_properties: {grid_position: 'RIOHQK,FJXVEE VBNWVN,DFKQKN', full_width_row: false}
+    layout_properties: {grid_position: 'DZRFTK,INTUTK VBNWVN,DFKQKN', full_width_row: false}
+    event_bindings: {click: profile_button_click}
   event_bindings: {refreshing_data_bindings: card_1_refreshing_data_bindings}
 is_package: true
