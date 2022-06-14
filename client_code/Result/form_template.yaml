@@ -16,7 +16,7 @@ components:
     layout_properties: {grid_position: 'TXQFLO,KJVFPN'}
   - type: RepeatingPanel
     properties: {role: null, tooltip: '', border: '', foreground: '', items: null,
-      visible: true, spacing_above: small, spacing_below: small, item_template: Result.Form,
+      visible: true, spacing_above: small, spacing_below: small, item_template: Result.ResultSingleCard,
       background: ''}
     name: repeating_panel
     layout_properties: {grid_position: 'ULYOUP,RNJNRI'}

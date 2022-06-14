@@ -1,0 +1,43 @@
+container:
+  type: ColumnPanel
+  properties: {col_widths: '{}'}
+components:
+- type: ColumnPanel
+  properties: {role: card, col_widths: '{}'}
+  name: card_1
+  layout_properties: {grid_position: 'DCRDTP,SHNGYO'}
+  components:
+  - type: Label
+    properties: {role: headline, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: Оставить отзыв, font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+      underline: false, icon: ''}
+    name: label_1
+    layout_properties: {grid_position: 'WYNJEY,ZVEGFB'}
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: 'Анонимно
+
+        Ваш отзыв будет виден исключительно администратору и специалисту, которому
+        он адресован', font_size: null, font: '', spacing_above: small, icon_align: left,
+      spacing_below: small, italic: false, background: '', bold: false, underline: false,
+      icon: ''}
+    name: label_2
+    layout_properties: {grid_position: 'UYJUCG,QARCKH'}
+  - type: TextArea
+    properties: {role: null, align: left, height: '', tooltip: '', placeholder: Введите ваш отзыв...,
+      border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
+      auto_expand: false, font: '', spacing_above: small, spacing_below: small, italic: false,
+      background: '', bold: false, underline: false}
+    name: text_area_1
+    layout_properties: {grid_position: 'ZBUJWZ,NTWUCY'}
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: 'Отправляя комментарий, вы даёте согласие на то, что в
+        случае негативного отклика, администратор может связаться с вами по зарегистрированному
+        почтовому адресу для уточнения деталей', font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: true, background: '', bold: false,
+      underline: false, icon: ''}
+    name: label_3
+    layout_properties: {grid_position: 'ZMUUJH,BHVHJY'}
+is_package: true

@@ -40,6 +40,20 @@ components:
     data_bindings:
     - {property: source, code: 'self.item[''photo'']'}
   - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: 'Специализация:', font_size: 20, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+      underline: false, icon: ''}
+    name: label_4
+    layout_properties: {grid_position: 'RIOHQK,FJXVEE FOWHRZ,QHBNPF'}
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: '', font_size: 20, font: '', spacing_above: small, icon_align: left,
+      spacing_below: small, italic: false, background: '', bold: false, underline: false,
+      icon: ''}
+    name: label_5
+    layout_properties: {grid_position: 'RIOHQK,FJXVEE HFMISJ,TKXHDN'}
+  - type: Label
     properties: {role: subheading, align: left, tooltip: '', border: '', foreground: '',
       visible: true, text: 'Цена, руб/час:', font_size: 26, font: '', spacing_above: small,
       icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
@@ -73,4 +87,11 @@ components:
       underline: false, icon: ''}
     name: label_3
     layout_properties: {grid_position: 'AHNTGC,HRBECF'}
+  - type: Button
+    properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
+      foreground: '', visible: true, text: Оставить отзыв, font_size: null, font: '',
+      spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+      background: '', bold: false, underline: false, icon: ''}
+    name: feedback_button
+    layout_properties: {grid_position: 'VZPKSQ,NOBSQX', full_width_row: false}
 is_package: true

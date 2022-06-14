@@ -49,6 +49,9 @@ db_schema:
     - name: photo
       admin_ui: {width: 200}
       type: media
+    - name: description
+      admin_ui: {width: 200}
+      type: string
     - name: rate_in_byn
       admin_ui: {width: 200}
       type: number
@@ -76,4 +79,23 @@ db_schema:
     - name: name
       admin_ui: {width: 200}
       type: string
+  feedback:
+    title: Feedback
+    client: none
+    server: full
+    columns:
+    - name: user
+      admin_ui: {width: 200}
+      type: link_single
+      target: users
+    - name: therapist_name
+      admin_ui: {width: 200}
+      type: link_single
+      target: therapists
+    - name: content
+      admin_ui: {width: 200}
+      type: string
+    - name: date_added
+      admin_ui: {width: 200}
+      type: datetime
 renamed: true
