@@ -71,7 +71,26 @@ class Search(SearchTemplate):
     
     next_form = Result(self.selected_max_rate, self.selected_city,  self.selected_specialisation)
     self.column_panel.add_component(next_form)  
+
     
+  def search_all_click(self, **event_args):
+    """This method is called when the link is clicked"""
+    self.column_panel.clear()
+    
+    next_form = Result()
+    self.column_panel.add_component(next_form)  
+    
+   
+
+    
+  def search_by_name_click(self, **event_args):
+    """This method is called when the link is clicked"""
+    pass
+
+
+
+
+
 
 
 

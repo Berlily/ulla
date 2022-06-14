@@ -13,8 +13,9 @@ import anvil.tables.query as q
 
 
 @anvil.server.callable
-def get_therapists( max_rate, city_var: str, spec: str ) :
-
+def get_therapists( max_rate: int, city_var: str, spec: str ) :
+  """the function is used when using filter search (i.e. essentially taking certain dropdown values)"""
+  
   if max_rate == "не имеет значения" and spec!= "Затрудняюсь ответить" :
     result_view = app_tables.therapists.search(city= city_var, specialisation= [spec])
   elif max_rate != "не имеет значения" and spec == "Затрудняюсь ответить" :
@@ -27,3 +28,8 @@ def get_therapists( max_rate, city_var: str, spec: str ) :
   
   return result_view
 
+
+@anvil.server.callable
+def get_therapists_all( ) :
+  result_view = app_tables.therapists.search()
+  return result_view

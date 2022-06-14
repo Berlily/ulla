@@ -55,19 +55,22 @@ components:
     layout_properties: {grid_position: 'RIOHQK,FJXVEE VKCZHZ,RXTOUE', full_width_row: false}
     data_bindings:
     - {property: text, code: 'self.item[''rate_in_byn'']'}
-  - type: Button
-    properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
-      foreground: '', visible: true, text: Забронировать время, font_size: null, font: '',
+  - type: Label
+    properties: {}
+    name: description
+    layout_properties: {grid_position: 'PPRQAR,CYMCTO'}
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: 'Записаться прямо сейчас:', font_size: null, font: '',
       spacing_above: small, icon_align: left, spacing_below: small, italic: false,
       background: '', bold: false, underline: false, icon: ''}
-    name: book_button
-    layout_properties: {grid_position: 'RIOHQK,FJXVEE QJBJTF,YYIXUW', full_width_row: false}
-  - type: Button
-    properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
-      foreground: '', visible: true, text: Перейти в профиль, font_size: null, font: '',
-      spacing_above: small, icon_align: left, spacing_below: small, italic: false,
-      background: '', bold: false, underline: false, icon: ''}
-    name: profile_button
-    layout_properties: {grid_position: 'RIOHQK,FJXVEE VBNWVN,DFKQKN', full_width_row: false}
-    event_bindings: {click: profile_button_click}
+    name: label_2
+    layout_properties: {grid_position: 'BDNOUW,PEOTCP'}
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: + 375 29 77 777 77, font_size: 20, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+      underline: false, icon: ''}
+    name: label_3
+    layout_properties: {grid_position: 'AHNTGC,HRBECF'}
 is_package: true

@@ -13,6 +13,7 @@ name: ulla_user_side
 runtime_options: {version: 2, client_version: '3', server_version: python3-sandbox,
   server_spec: null}
 metadata: {title: ülla, logo_img: 'asset:ulla.png', description: Сервис для поиска психологической помощи в вашем городе}
+startup_form: Base
 db_schema:
   users:
     title: Users
