@@ -4,6 +4,7 @@ import anvil.tables.query as q
 from anvil.tables import app_tables
 import anvil.server
 import anvil.tables.query as q
+from datetime import datetime
 
 # This is a server module. It runs on the Anvil server,
 # rather than in the user's browser.
@@ -33,3 +34,11 @@ def get_therapists( max_rate: int, city_var: str, spec: str ) :
 def get_therapists_all( ) :
   result_view = app_tables.therapists.search()
   return result_view
+
+@anvil.server.callable
+def add_feedback(feedback):
+  app_tables.feedback.add_row(
+    content=feedback, 
+    date_added=datetime.now()
+  )
+ 

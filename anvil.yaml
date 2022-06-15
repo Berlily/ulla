@@ -84,14 +84,6 @@ db_schema:
     client: none
     server: full
     columns:
-    - name: user
-      admin_ui: {width: 200}
-      type: link_single
-      target: users
-    - name: therapist_name
-      admin_ui: {width: 200}
-      type: link_single
-      target: therapists
     - name: content
       admin_ui: {width: 200}
       type: string

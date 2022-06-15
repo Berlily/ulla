@@ -12,3 +12,17 @@ class FeedbackForm(FeedbackFormTemplate):
     self.init_components(**properties)
 
     # Any code you write here will run when the form opens.
+    
+
+  def submit_button_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    #name = self.name_box.text
+    feedback = self.feedback_box.text
+    anvil.server.call('add_feedback', feedback)
+    Notification("Отзав отправлен! Спасибо!").show()
+    self.clear_inputs()
+
+       
+  def clear_inputs(self):
+    #self.name_box.text = ""
+    self.feedback_box.text = ""

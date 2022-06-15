@@ -5,7 +5,7 @@ import anvil.users
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
-from .Profile import Profile
+from .FeedbackForm import FeedbackForm
 
 class ResultSingleCard(ResultSingleCardTemplate):
   def __init__(self, **properties):
@@ -20,7 +20,7 @@ class ResultSingleCard(ResultSingleCardTemplate):
     """This method is called when the button is clicked"""
     self.column_panel.clear()
     
-    next_form = Profile()
+    next_form = FeedbackForm()
     self.column_panel.add_component(next_form)
 
 
