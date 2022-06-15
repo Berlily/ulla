@@ -1,6 +1,7 @@
 container:
   type: ColumnPanel
   properties: {col_widths: '{}'}
+  event_bindings: {refreshing_data_bindings: form_refreshing_data_bindings}
 components:
 - type: ColumnPanel
   properties: {role: card, col_widths: '{}'}
@@ -90,7 +91,7 @@ components:
       icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
       underline: false, icon: ''}
     name: label_3
-    layout_properties: {grid_position: 'AHNTGC,HRBECF'}
+    layout_properties: {grid_position: 'UMKEJE,FTRFQA'}
   - type: Button
     properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
       foreground: '', visible: true, text: Оставить отзыв, font_size: null, font: '',

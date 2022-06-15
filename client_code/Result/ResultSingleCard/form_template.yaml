@@ -50,11 +50,29 @@ components:
     layout_properties: {grid_position: 'DZRFTK,INTUTK VKCZHZ,RXTOUE', full_width_row: false}
     data_bindings:
     - {property: text, code: 'self.item[''rate_in_byn'']'}
-  - type: Button
-    properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
-      foreground: '', visible: true, text: Подробнее, font_size: null, font: '', spacing_above: small,
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: 'Записаться прямо сейчас:', font_size: null, font: '',
+      spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+      background: '', bold: false, underline: false, icon: ''}
+    name: label_2
+    layout_properties:
+      col_widths: {}
+      grid_position: DZRFTK,INTUTK ZCDJCF,QPPAAY
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: + 375 29 77 777 77, font_size: 20, font: '', spacing_above: small,
       icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
       underline: false, icon: ''}
+    name: label_3
+    layout_properties:
+      col_widths: {}
+      grid_position: DZRFTK,INTUTK BCSQWT,JFFTLM
+  - type: Button
+    properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
+      foreground: '', visible: true, text: Оставить отзыв, font_size: null, font: '',
+      spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+      background: '', bold: false, underline: false, icon: ''}
     name: profile_button
     layout_properties: {grid_position: 'DZRFTK,INTUTK VUTNQA,MRHFCH', full_width_row: false}
     event_bindings: {click: profile_button_click}
