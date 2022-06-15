@@ -80,12 +80,7 @@ class Search(SearchTemplate):
     next_form = Result()
     self.column_panel.add_component(next_form)  
     
-   
-
-    
-  def search_by_name_click(self, **event_args):
-    """This method is called when the link is clicked"""
-    pass
+  
 
 
 

@@ -5,7 +5,7 @@ container:
 components:
 - type: ColumnPanel
   properties: {role: card, col_widths: '{}'}
-  name: card_1
+  name: column_panel
   layout_properties: {grid_position: 'VFGPTP,EIHNMA'}
   components:
   - type: Label

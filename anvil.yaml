@@ -49,9 +49,6 @@ db_schema:
     - name: photo
       admin_ui: {width: 200}
       type: media
-    - name: description
-      admin_ui: {width: 200}
-      type: string
     - name: rate_in_byn
       admin_ui: {width: 200}
       type: number
@@ -63,6 +60,9 @@ db_schema:
       admin_ui: {width: 200}
       type: link_multiple
       target: specialisation
+    - name: description
+      admin_ui: {width: 200}
+      type: string
   specialisation:
     title: Specialisation
     client: search
